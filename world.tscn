@@ -6,7 +6,7 @@
 
 [sub_resource type="Environment" id="Environment_g3bud"]
 background_mode = 1
-background_color = Color(0.552941, 0.733333, 0.858824, 1)
+background_color = Color(0.411765, 0.756863, 0.909804, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vd2np"]
 render_priority = 0
