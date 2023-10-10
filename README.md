@@ -1,6 +1,8 @@
 # Godot4-Basic3Dstarter
  Godot 4 template, with shader, prototyping, animation, smooth character controller
 
+### Download https://godotengine.org/asset-library/asset/2242
+
 # In godot:
 
 <img width="690" alt="image" src="https://github.com/TechnoLukas/Godot4-Basic3dStarter/assets/110934679/4576e4aa-dba4-4503-acfc-042c42e96e79">
