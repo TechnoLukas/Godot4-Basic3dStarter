@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Basic3dStarter"
 run/main_scene="res://world.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [input]
@@ -46,6 +46,4 @@ move_backward={
 
 [rendering]
 
-anti_aliasing/quality/msaa_2d=3
-anti_aliasing/quality/msaa_3d=3
 anti_aliasing/quality/screen_space_aa=1

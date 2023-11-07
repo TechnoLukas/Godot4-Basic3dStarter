@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=26 format=3 uid="uid://dtq8vkrpvuqfj"]
+[gd_resource type="VisualShader" load_steps=27 format=3 uid="uid://dtq8vkrpvuqfj"]
 
 [sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_7onkt"]
 default_input_values = [0, 0.0, 1, 2.0]
@@ -57,6 +57,9 @@ operator = 3
 [sub_resource type="VisualShaderNodeVectorDecompose" id="VisualShaderNodeVectorDecompose_174l2"]
 default_input_values = [0, Quaternion(0, 0, 0, 0)]
 op_type = 2
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_7xwh5"]
+function = 1
 
 [sub_resource type="VisualShaderNodeIntParameter" id="VisualShaderNodeIntParameter_qeu0r"]
 parameter_name = "grid_size"
@@ -267,7 +270,7 @@ nodes/fragment/22/position = Vector2(560, 180)
 nodes/fragment/23/node = SubResource("VisualShaderNodeFloatOp_xg5kh")
 nodes/fragment/23/position = Vector2(840, 360)
 nodes/fragment/24/node = SubResource("VisualShaderNodeFloatFunc_rbb1n")
-nodes/fragment/24/position = Vector2(1060, 180)
+nodes/fragment/24/position = Vector2(1180, 180)
 nodes/fragment/25/node = SubResource("VisualShaderNodeSwitch_o2e58")
 nodes/fragment/25/position = Vector2(1520, 220)
 nodes/fragment/28/node = SubResource("VisualShaderNodeColorParameter_rt3yy")
@@ -276,4 +279,7 @@ nodes/fragment/29/node = SubResource("VisualShaderNodeColorParameter_bbh83")
 nodes/fragment/29/position = Vector2(780, 1080)
 nodes/fragment/30/node = SubResource("VisualShaderNodeVectorDecompose_174l2")
 nodes/fragment/30/position = Vector2(1938.28, 457.974)
-nodes/fragment/connections = PackedInt32Array(4, 0, 3, 1, 3, 0, 5, 0, 6, 0, 5, 1, 7, 0, 6, 1, 5, 0, 8, 0, 13, 0, 3, 0, 9, 0, 10, 0, 8, 0, 12, 0, 12, 0, 9, 0, 17, 0, 15, 0, 16, 0, 17, 0, 8, 1, 16, 0, 19, 0, 20, 0, 21, 0, 19, 0, 8, 2, 21, 0, 10, 0, 22, 0, 15, 0, 22, 1, 22, 0, 23, 0, 20, 0, 23, 1, 23, 0, 24, 0, 4, 0, 6, 0, 25, 0, 0, 0, 24, 0, 25, 0, 28, 0, 25, 1, 29, 0, 25, 2, 25, 0, 30, 0, 30, 3, 0, 1)
+nodes/fragment/31/node = SubResource("VisualShaderNodeUVFunc_7xwh5")
+nodes/fragment/31/position = Vector2(1800, 60)
+nodes/fragment/connections = PackedInt32Array(4, 0, 3, 1, 3, 0, 5, 0, 6, 0, 5, 1, 7, 0, 6, 1, 5, 0, 8, 0, 13, 0, 3, 0, 9, 0, 10, 0, 8, 0, 12, 0, 12, 0, 9, 0, 17, 0, 15, 0, 16, 0, 17, 0, 8, 1, 16, 0, 19, 0, 20, 0, 21, 0, 19, 0, 8, 2, 21, 0, 10, 0, 22, 0, 15, 0, 22, 1, 22, 0, 23, 0, 20, 0, 23, 1, 23, 0, 24, 0, 4, 0, 6, 0, 24, 0, 25, 0, 30, 3, 0, 1, 25, 0, 30, 0, 29, 0, 25, 2, 28, 0, 25, 1, 25, 0, 0, 0, 25, 0, 31, 0)
+metadata/_edit_res_path = "res://gridmaterial.tres"
