@@ -1,16 +1,16 @@
-# Godot4-Basic3Dstarter - Simplified
+# Godot4-Basic3Dstarter [Simplified]
  Godot 4 template, with shader, prototyping, animation, smooth character controller
+
+ main page : https://github.com/TechnoLukas/Godot4-Basic3dStarter
 
 # In godot:
 
-<img width="690" alt="image" src="https://github.com/TechnoLukas/Godot4-Basic3dStarter/assets/110934679/4576e4aa-dba4-4503-acfc-042c42e96e79">
+<img width="743" alt="image" src="https://github.com/TechnoLukas/Godot4-Basic3dStarter/assets/110934679/63f94bdf-ed92-4378-ade7-b14252afbfef">
 
+# Fixed:
+- Prevously user could not controll the player in the web version, now it is fixed. Due to godot bug, there in no way to hide the mouse on web.
 
-# Template Showcase:
-
-https://github.com/TechnoLukas/Godot4-Basic3dStarter/assets/110934679/5b758a5b-59d3-44ac-b7c2-e3a443a7db32
-
-
+- Prevously user could spam the keys and the player would glitch and move while user is pressing nothing. Now it is fixed.
 
 # Features:
 - Old Character Controller
