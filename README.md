@@ -1,4 +1,4 @@
-# Godot4-Basic3Dstarter
+# Godot4-Basic3Dstarter - Simplified
  Godot 4 template, with shader, prototyping, animation, smooth character controller
 
 # In godot:
