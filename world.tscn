@@ -16,11 +16,6 @@ shader_parameter/Color_2 = Color(0.403922, 0.403922, 0.403922, 1)
 
 [node name="World" type="Node3D"]
 
-[node name="directional_light" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.866025, 0.25, -0.433013, 0, 0.866025, 0.5, 0.5, -0.433013, 0.75, 0, 6, 0)
-light_energy = 0.0
-shadow_enabled = true
-
 [node name="character" parent="." instance=ExtResource("2_7bd7c")]
 transform = Transform3D(-1, 2.98023e-08, -8.74228e-08, 2.98023e-08, 1, 0, 8.74228e-08, 0, -1, 0, 1, 0)
 
@@ -32,3 +27,8 @@ use_collision = true
 collision_mask = 7
 size = Vector3(30, 2, 30)
 material = SubResource("ShaderMaterial_gsimq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 4, 0)
+shadow_enabled = true
+directional_shadow_mode = 1
