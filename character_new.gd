@@ -30,19 +30,8 @@ func _unhandled_key_input(event):
 	if Input.is_action_just_pressed("mouse_active"):
 		if OS.get_name() == "Web":
 			if mouse_is_active:
-				print("request unlock")
-				JavaScriptBridge.eval("""
-				var element = document.pointerLockElement;
-				console.log(element);
-				document.exitPointerLock();
-				""")
 				mouse_is_active=false
 			else:
-				JavaScriptBridge.eval("""
-				var element = document.pointerLockElement;
-				console.log(element);
-				document.body.requestPointerLock();
-				""")
 				mouse_is_active=true
 		else:
 			if mouse_is_active:
@@ -66,15 +55,10 @@ func _process(delta):
 	var input_dir = Vector2.ZERO
 	if mouse_is_active:
 		print(Input.is_action_pressed("move_forward")," ",Input.is_action_pressed("move_backward")," ",Input.is_action_pressed("move_left")," ",Input.is_action_pressed("move_right"))
-		input_dir.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-		input_dir.y = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")	
-	
-	#input_dir.x = Input.get_axis("move_left", "move_right")
-	#input_dir.y = Input.get_axis("move_forward", "move_backward")
+
+		input_dir.x = Input.get_axis("move_left", "move_right")
+		input_dir.y = Input.get_axis("move_forward", "move_backward")
 		 
-	#input_dir.x = Input.get_vector("move_left", "move_right", "move_forward", "move_backward").x   # <-- this has weird glithes on web. Looks like it is getting stuck on value, and player keeps moving while person is touching nothing.
-	#input_dir.y = Input.get_vector("move_left", "move_right", "move_forward", "move_backward").y   # <-- this has weird glithes on web. Looks like it is getting stuck on value, and player keeps moving while person is touching nothing.
-	
 	#input_dir=input_dir.normalized()
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	direction *= speed
