@@ -15,13 +15,12 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready():
 	fp_camera.current = true
 	camera=fp_camera
-	#Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 	#Input.mouse_mode=Input.MOUSE_MODE_HIDDEN
-	mouse_is_active=false
+	mouse_is_active=true
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and mouse_is_active:
-		print(event.relative.x)
 		rotate_y(-event.relative.x * .005)
 		camera.rotate_x(-event.relative.y * .005)
 		camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)
@@ -48,8 +47,6 @@ func _process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Vector2.ZERO
 	if mouse_is_active:
-		print(Input.is_action_pressed("move_forward")," ",Input.is_action_pressed("move_backward")," ",Input.is_action_pressed("move_left")," ",Input.is_action_pressed("move_right"))
-
 		input_dir.x = Input.get_axis("move_left", "move_right")
 		input_dir.y = Input.get_axis("move_forward", "move_backward")
 		 
